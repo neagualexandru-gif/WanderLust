@@ -1,0 +1,352 @@
+/* ==========================================================================
+   1. VARIABILE, TIPOGRAFIE ȘI STILURI GENERALE (Valabile pentru tot site-ul)
+   ========================================================================== */
+:root {
+    --color-teal: #00897B;         /* Culoarea principală a blogului */
+    --color-coral: #FF7043;        /* Culoarea secundară / Accent */
+    --color-dark: #212529;         /* Culoare text principal și footere */
+    --color-light-bg: #f8f9fa;     /* Fundal secțiuni secundare */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+    --transition-smooth: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: var(--font-body);
+    color: #333333;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: var(--font-heading);
+}
+
+.max-w-600 {
+    max-width: 600px;
+}
+
+/* ==========================================================================
+   2. ELEMENTE REUTILIZABILE (Butoane, Culori utilitare, Scroll top)
+   ========================================================================== */
+.text-teal {
+    color: var(--color-teal) !important;
+}
+
+.btn-coral {
+    background-color: var(--color-coral) !important;
+    border-color: var(--color-coral) !important;
+    color: #ffffff !important;
+    transition: var(--transition-smooth);
+}
+
+.btn-coral:hover {
+    background-color: #e65b32 !important;
+    border-color: #e65b32 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 112, 67, 0.3);
+}
+
+.btn-outline-teal {
+    color: var(--color-teal) !important;
+    border-color: var(--color-teal) !important;
+    transition: var(--transition-smooth);
+    border-radius: 20px;
+}
+
+.btn-outline-teal:hover, 
+.btn-outline-teal.active {
+    background-color: var(--color-teal) !important;
+    color: #ffffff !important;
+    border-color: var(--color-teal) !important;
+}
+
+#backToTop {
+    transition: var(--transition-smooth);
+}
+#backToTop:hover {
+    transform: scale(1.1);
+    background-color: var(--color-teal) !important;
+    border-color: var(--color-teal) !important;
+}
+
+/* ==========================================================================
+   3. STRUCTURA DE NAVIGAȚIE (Navbar fixat) ȘI FOOTER (Subsol unificat)
+   ========================================================================== */
+.navbar {
+    transition: var(--transition-smooth);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1rem !important;
+    transition: var(--transition-smooth);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--color-coral) !important;
+}
+
+footer a {
+    transition: var(--transition-smooth);
+}
+
+footer a:hover {
+    color: var(--color-coral) !important;
+    padding-left: 4px;
+}
+
+footer .fab {
+    transition: var(--transition-smooth);
+}
+
+footer .fab:hover {
+    color: var(--color-coral) !important;
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   4. NEW ANIMATED CAROUSEL (Noutatea solicitată pentru index.html)
+   ========================================================================== */
+.carousel-img-zoom-container {
+    overflow: hidden;
+    width: 100%;
+    height: 65vh; /* Înălțime ideală pe desktop */
+    background-color: #000;
+}
+
+.carousel-img-zoom-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Tranziție foarte lungă pentru efectul de mișcare continuă */
+    transition: transform 6s cubic-bezier(0.1, 1, 0.1, 1), opacity 1.2s ease-in-out;
+    opacity: 0.75; /* Întunecă puțin imaginea pentru a scoate textul alb în evidență */
+}
+
+/* Când slide-ul este afișat, pornește zoom-ul fin */
+.carousel-item.active .carousel-img-zoom-container img {
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+/* Fluidizarea crossfade-ului dintre imagini */
+.carousel-fade .carousel-item {
+    transition-property: opacity;
+    transition-duration: 1.2s; 
+}
+
+/* Ridicarea textelor de pe carusel de jos în sus */
+.carousel-item.active .animated-caption h2 {
+    animation: slideUpFade 0.9s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    opacity: 0;
+}
+
+.carousel-item.active .animated-caption p,
+.carousel-item.active .animated-caption .btn {
+    animation: slideUpFade 0.9s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation-delay: 0.25s;
+    opacity: 0;
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stilizare elegantă butoane sub formă de cercuri Teal */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(0, 137, 123, 0.75);
+    padding: 1.4rem;
+    border-radius: 50%;
+    transition: var(--transition-smooth);
+}
+
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+    background-color: var(--color-coral);
+    transform: scale(1.1);
+}
+
+/* ==========================================================================
+   5. PAGINI ARTICOLE (articles.html) ȘI DESTINAȚII (destinations.html)
+   ========================================================================== */
+.article-card, .blog-post-card, .destination-card, .card.h-100.shadow-sm.border-0.bg-white {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: var(--transition-smooth);
+}
+
+.article-card:hover, .blog-post-card:hover, .destination-card:hover, .card.h-100.shadow-sm.border-0.bg-white:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.14);
+}
+
+.article-card img, .destination-card img, .card.h-100.shadow-sm.border-0.bg-white img {
+    transition: var(--transition-smooth);
+}
+
+.article-card:hover img, .destination-card:hover img, .card.h-100.shadow-sm.border-0.bg-white:hover img {
+    transform: scale(1.06);
+}
+
+/* ==========================================================================
+   6. PAGINA DESPRE NOI (about.html)
+   ========================================================================== */
+.about-img-wrapper {
+    position: relative;
+}
+
+.about-img-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 4px solid var(--color-coral);
+    top: 15px;
+    left: 15px;
+    z-index: -1;
+    border-radius: 8px;
+    transition: var(--transition-smooth);
+}
+
+.about-img-wrapper:hover::before {
+    top: 8px;
+    left: 8px;
+}
+
+.timeline-item {
+    border-left: 2px solid var(--color-teal);
+    position: relative;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-coral);
+    border-radius: 50%;
+    left: -7px;
+    top: 6px;
+}
+
+/* ==========================================================================
+   7. PAGINA ECHIPAMENT RECOMANDAT (gear.html)
+   ========================================================================== */
+.gear-item-card .card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.gear-item-card .overflow-hidden img {
+    transition: transform 0.5s ease-in-out;
+}
+
+.gear-item-card:hover .overflow-hidden img {
+    transform: scale(1.08);
+}
+
+.gear-item-card:hover .card {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+@keyframes pulse-star {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+.fa-star {
+    animation: pulse-star 2s infinite ease-in-out;
+    display: inline-block;
+}
+
+/* ==========================================================================
+   8. PAGINA CONTACT ȘI COLABORĂRI (contact.html)
+   ========================================================================== */
+.form-control {
+    border: 1px solid #ced4da;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    transition: var(--transition-smooth);
+}
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: var(--color-teal);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(0, 137, 123, 0.25);
+}
+
+.was-validated .form-control:valid { border-color: #198754; }
+.was-validated .form-control:invalid { border-color: #dc3545; }
+
+/* ==========================================================================
+   9. OPTIMIZARE RESPONSIVE
+   ========================================================================== */
+@media (max-width: 991.98px) {
+    body { padding-top: 70px !important; }
+    .navbar-collapse {
+        background-color: var(--color-teal);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+    .carousel-img-zoom-container { height: 50vh; } /* Mai scurt pe tablete */
+}
+
+@media (max-width: 767.98px) {
+    #gearFilterContainer {
+        overflow-x: auto;
+        white-space: nowrap;
+        justify-content: flex-start !important;
+        padding-bottom: 8px;
+    }
+    h1, .display-4, .display-5 { font-size: 2.1rem !important; }
+    .carousel-img-zoom-container { height: 40vh; } /* Dimensiune optimă pe mobil */
+}
+
+/* ==========================================================================
+   10. STILURI PENTRU ANIMAȚIILE LA SCROLL (Suport pentru main.js)
+   ========================================================================== */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity, transform;
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity, transform;
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity, transform;
+}
+
+/* Clasa adăugată dinamic de JavaScript la scroll (IntersectionObserver) */
+.fade-in-up.visible,
+.fade-in-left.visible,
+.fade-in-right.visible {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+}
