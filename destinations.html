@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinații - Wanderlust Blog de Călătorii</title>
+    <meta name="description"
+        content="Explorează destinațiile noastre de vis. Ghiduri pe continente, recomandări culinare și atracții turistice de neratat.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .destination-card .card-img-container {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .destination-card .grid-img {
+            transition: transform 0.5s ease;
+        }
+
+        .destination-card:hover .grid-img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100" style="padding-top: 76px;">
+
+    <!-- Navigație -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm" style="background-color: #00897B;">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html"
+                style="font-family: 'Playfair Display', serif; font-size: 1.6rem;">
+                <i class="fas fa-compass me-2" style="color: #FF7043;"></i>
+                <span class="fw-bold">Wander<span style="color: #FF7043;">lust</span></span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Acasă</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="destinations.html">Destinații</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Despre noi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gear.html">Echipament</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-coral text-white px-3 fw-bold" href="articles.html"
+                            style="background-color: #FF7043; border-color: #FF7043;">
+                            <i class="fas fa-book-open me-1"></i> Articole
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-5 text-white text-center"
+        style="background: linear-gradient(rgba(0, 137, 123, 0.8), rgba(0, 137, 123, 0.95)), url('./img/p1.avif') ">
+        <div class="container py-4">
+            <h1 class="display-4 fw-bold" style="font-family: 'Playfair Display', serif;">Harta Aventurilor Tale</h1>
+            <p class="lead max-w-600 mx-auto">Găsește următoarea ta destinație de vacanță organizată pe continente și
+                stiluri de viață.</p>
+        </div>
+    </section>
+
+    <!-- Secțiunea de Continente -->
+    <main class="container my-5 flex-grow-1">
+        <h2 class="text-center mb-5" style="font-family: 'Playfair Display', serif; font-weight: 700;">Explorează după
+            Continent</h2>
+
+        <div class="row g-4">
+            <!-- Asia -->
+            <div class="col-md-6 col-lg-3 destination-card">
+                <div class="card h-100 shadow-sm border-0 position-relative">
+                    <div class="card-img-container" style="height: 350px;">
+                        <img src="./img/p5.avif"
+                            class="grid-img h-100 w-100" style="object-fit: cover;" alt="Asia">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4"
+                            style="background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+                            <h3 class="text-white h4 mb-2" style="font-family: 'Playfair Display', serif;">Asia</h3>
+                            <p class="text-white-50 small mb-3">Tărâmul templelor sacre, aromelor exotice și insulelor
+                                tropicale.</p>
+                            <a href="articles.html?filtru=asia" class="btn btn-sm text-white fw-bold align-self-start"
+                                style="background-color: #FF7043; border-color: #FF7043;">Vezi articole</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Europa -->
+            <div class="col-md-6 col-lg-3 destination-card">
+                <div class="card h-100 shadow-sm border-0 position-relative">
+                    <div class="card-img-container" style="height: 350px;">
+                        <img src="./img/p6.avif"
+                            class="grid-img h-100 w-100" style="object-fit: cover;" alt="Europa">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4"
+                            style="background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+                            <h3 class="text-white h4 mb-2" style="font-family: 'Playfair Display', serif;">Europa</h3>
+                            <p class="text-white-50 small mb-3">Istorie milenară, culturi diverse și metropole pline de
+                                viață.</p>
+                            <a href="articles.html?filtru=europa" class="btn btn-sm text-white fw-bold align-self-start"
+                                style="background-color: #FF7043; border-color: #FF7043;">Vezi articole</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- America (Actualizat) -->
+            <div class="col-md-6 col-lg-3 destination-card">
+                <div class="card h-100 shadow-sm border-0 position-relative">
+                    <div class="card-img-container" style="height: 350px;">
+                        <img src="./img/p7.avif"
+                            class="grid-img h-100 w-100" style="object-fit: cover;" alt="America">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4"
+                            style="background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+                            <h3 class="text-white h4 mb-2" style="font-family: 'Playfair Display', serif;">America</h3>
+                            <p class="text-white-50 small mb-3">Zgârie-nori legendari, trasee andine și minuni ale
+                                naturii.</p>
+                            <a href="articles.html?filtru=america"
+                                class="btn btn-sm text-white fw-bold align-self-start"
+                                style="background-color: #FF7043; border-color: #FF7043;">Vezi articole</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Africa -->
+            <div class="col-md-6 col-lg-3 destination-card">
+                <div class="card h-100 shadow-sm border-0 position-relative">
+                    <div class="card-img-container" style="height: 350px;">
+                        <img src="./img/p8.avif"
+                            class="grid-img h-100 w-100" style="object-fit: cover;" alt="Africa">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4"
+                            style="background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+                            <h3 class="text-white h4 mb-2" style="font-family: 'Playfair Display', serif;">Africa</h3>
+                            <p class="text-white-50 small mb-3">Nopți magice în deșert, safari-uri epice și tradiții
+                                autentice.</p>
+                            <a href="articles.html?filtru=africa" class="btn btn-sm text-white fw-bold align-self-start"
+                                style="background-color: #FF7043; border-color: #FF7043;">Vezi articole</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5 opacity-25">
+
+        <!-- Secțiune adițională: Recomandări după stilul de călătorie -->
+        <h2 class="text-center mb-5" style="font-family: 'Playfair Display', serif; font-weight: 700;">Cum Îți Place Să
+            Călătorești?</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="p-4 bg-light rounded-3 h-100 shadow-sm">
+                    <div class="mb-3 fs-1" style="color: #00897B;"><i class="fas fa-hiking"></i></div>
+                    <h4 style="font-family: 'Playfair Display', serif; font-weight: 700;">Aventură & Natură</h4>
+                    <p class="text-muted small">Trasee montane periculoase, nopți la cort sub cerul liber și drumeții
+                        active prin parcuri naționale.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-light rounded-3 h-100 shadow-sm">
+                    <div class="mb-3 fs-1" style="color: #00897B;"><i class="fas fa-wallet"></i></div>
+                    <h4 style="font-family: 'Playfair Display', serif; font-weight: 700;">Buget Redus</h4>
+                    <p class="text-muted small">Sfaturi inteligente despre cum să vizitezi orașe scumpe precum New York
+                        sau Roma cheltuind extrem de puțin.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-light rounded-3 h-100 shadow-sm">
+                    <div class="mb-3 fs-1" style="color: #00897B;"><i class="fas fa-umbrella-beach"></i></div>
+                    <h4 style="font-family: 'Playfair Display', serif; font-weight: 700;">Relaxare Exotică</h4>
+                    <p class="text-muted small">Insule ascunse din Thailanda și plaje secrete din Bali ideale pentru
+                        deconectare totală de la stres.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-auto border-top border-4" style="border-color: #00897B !important;">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- Coloana 1: Despre Brand & Social -->
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3" style="font-family: 'Playfair Display', serif; font-size: 1.4rem;">
+                        <span style="color: #00897B;">Wander</span><span style="color: #FF7043;">lust</span>
+                    </h5>
+                    <p class="small text-secondary lh-lg mb-3">
+                        Un blog dedicat exploratorilor autentici. Împărtășesc ghiduri vizuale, bugete reale și recenzii
+                        de echipamente pentru a te ajuta să îți organizezi următoarea aventură.
+                    </p>
+                    <div class="d-flex gap-3 fs-5 mt-3">
+                        <a href="#" class="text-secondary" style="color: #00897B !important;" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-secondary" style="color: #00897B !important;" aria-label="Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-secondary" style="color: #00897B !important;" aria-label="YouTube"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-secondary" style="color: #00897B !important;" aria-label="Pinterest"><i
+                                class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <!-- Coloana 2: Navigare & Categorii -->
+                <div class="col-6 col-lg-2 offset-lg-1">
+                    <h6 class="text-uppercase fw-bold text-white small tracking-wider mb-3">Navigare</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html"
+                                class="text-secondary text-decoration-none small">Acasă</a></li>
+                        <li class="mb-2"><a href="destinations.html"
+                                class="text-secondary text-decoration-none small">Destinații</a></li>
+                        <li class="mb-2"><a href="gear.html"
+                                class="text-secondary text-decoration-none small">Echipament</a></li>
+                        <li class="mb-2"><a href="articles.html" class="text-secondary text-decoration-none small">Toate
+                                Articolele</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coloana 3: Contact & Info Utile -->
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-uppercase fw-bold text-white small tracking-wider mb-3">Contact direct</h6>
+                    <ul class="list-unstyled text-secondary small lh-lg">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2" style="color: #00897B;"></i> Chișinău,
+                            Moldova</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2" style="color: #00897B;"></i>
+                            contact@wanderlust.md</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2" style="color: #00897B;"></i> +373 60 000 000</li>
+                    </ul>
+                </div>
+
+                <!-- Coloana 4: Newsletter Box -->
+                <div class="col-md-6 col-lg-4">
+                    <h6 class="text-uppercase fw-bold text-white small tracking-wider mb-3">Rămâi în contact cu aventura
+                    </h6>
+                    <p class="small text-secondary mb-3">Abonează-te pentru a primi ghiduri de călătorie lunare și
+                        reduceri la echipamente direct în inbox.</p>
+                    <form action="#" class="row g-2">
+                        <div class="col-8">
+                            <input type="email"
+                                class="form-control form-control-sm border-secondary text-white px-3 py-2"
+                                style="background-color: rgba(225, 221, 221, 0.562); color: #ffffff !important; border-radius: 4px;"
+                                placeholder="Adresa ta de email..." required>
+                        </div>
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-sm btn-coral w-100 fw-bold py-2 text-white"
+                                style="background-color: #FF7043; border-color: #FF7043; border-radius: 4px;">
+                                Înscrie-te
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Linie subțire de separare -->
+            <hr class="my-4 opacity-10 bg-secondary">
+
+            <!-- Secțiunea Nouă de Copyright Personalizat -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="small text-secondary m-0">
+                        &copy; 2026 <span class="fw-bold" style="color: #00897B;">Wanderlust</span>. Toate drepturile
+                        rezervate.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="btn btn-coral rounded-circle position-fixed bottom-0 end-0 m-4 shadow d-none"
+        style="z-index: 1030; width: 45px; height: 45px; background-color: #FF7043; border-color: #FF7043;">
+        <i class="fas fa-arrow-up text-white"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+
+</html>
