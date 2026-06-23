@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echipament Recomandat - Wanderlust Blog de Călătorii</title>
+    <meta name="description"
+        content="Descoperă echipamentul meu de călătorie și fotografie. Recenzii sincere și recomandări de rucsacuri, camere foto și gadgeturi esențiale.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100" style="padding-top: 76px;">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm" style="background-color: #00897B;">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html"
+                style="font-family: 'Playfair Display', serif; font-size: 1.6rem;">
+                <i class="fas fa-compass me-2" style="color: #FF7043;"></i>
+                <span class="fw-bold">Wander<span style="color: #FF7043;">lust</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Acasă</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">Destinații</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Despre noi</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gear.html">Echipament</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-coral text-white px-3 fw-bold" href="articles.html"
+                            style="background-color: #FF7043; border-color: #FF7043;">
+                            <i class="fas fa-book-open me-1"></i> Articole
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="py-5 text-white text-center"
+        style="background: linear-gradient(rgba(0, 137, 123, 0.85), rgba(0, 137, 123, 0.95)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&width=1920&auto=format&fit=crop') center/cover;">
+        <div class="container py-3">
+            <h1 class="display-4 fw-bold" style="font-family: 'Playfair Display', serif;">Echipamentul Meu de Încredere
+            </h1>
+            <p class="lead max-w-600 mx-auto">Obiectele și gadgeturile care mă însoțesc în fiecare expediție și mă ajută
+                să documentez lumea.</p>
+        </div>
+    </section>
+
+    <!-- FILTER BAR -->
+    <section class="bg-light py-4 shadow-sm border-bottom">
+        <div class="container text-center">
+            <div class="d-flex flex-wrap gap-2 justify-content-center" id="gearFilterContainer">
+                <button class="btn btn-sm btn-outline-teal active filter-btn" data-filter="toate">Toate
+                    Echipamentele</button>
+                <button class="btn btn-sm btn-outline-teal filter-btn" data-filter="bagaje">Bagaje & Hiking</button>
+                <button class="btn btn-sm btn-outline-teal filter-btn" data-filter="foto">Foto & Video</button>
+                <button class="btn btn-sm btn-outline-teal filter-btn" data-filter="gadgeturi">Gadgeturi Utile</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="container my-5 flex-grow-1">
+
+        <!-- Secțiunea Must-Have -->
+        <div class="row mb-5 align-items-center p-4 rounded-3 shadow-sm bg-white border-start border-4"
+            style="border-color: #FF7043 !important;">
+            <div class="col-md-2 text-center text-md-start mb-3 mb-md-0">
+                <div class="fs-1" style="color: #FF7043;"><i class="fas fa-star"></i></div>
+            </div>
+            <div class="col-md-10">
+                <h2 class="h4 fw-bold" style="font-family: 'Playfair Display', serif;">Alesul Lunii: Regula de aur a
+                    bagajului eficient</h2>
+                <p class="text-muted m-0 small">Indiferent de destinație, un rucsac ergonomic bine compartimentat te
+                    scutește de taxe suplimentare și dureri de spate. Mai jos găsești exact produsele pe care le testez
+                    de peste 3 ani în condiții extreme.</p>
+            </div>
+        </div>
+
+        <!-- Grid Produse -->
+        <div class="row g-4" id="gearGrid">
+            <!-- Produs 1 -->
+            <div class="col-md-6 col-lg-4 gear-item-card" data-category="bagaje">
+                <div class="card h-100 shadow-sm border-0">
+                    <span class="badge position-absolute m-3 top-0 start-0 z-3"
+                        style="background-color: #FF7043;">Must-Have</span>
+                    <!-- Am adăugat bg-light pentru un fundal subtil și p-3 pentru ca obiectul să nu atingă marginile -->
+                    <div class="overflow-hidden position-relative bg-light p-3" style="height: 250px;">
+                        <!-- Am schimbat object-fit în contain pentru ca imaginea să încapă normal în întregime -->
+                        <img src="./img/gear1-r.png" class="card-img-top w-100 h-100 product-img"
+                            style="object-fit: contain;" alt="Rucsac Drumeție">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="h5 card-title fw-bold product-title" style="font-family: 'Playfair Display', serif;">
+                            Rucsac Hiking Pro 45L</h3>
+                        <p class="card-text text-muted flex-grow-1 small product-short-desc">Impermeabil, cu cadru
+                            ergonomic din aluminiu și compartimentare inteligentă pentru laptop și sac de dormit.</p>
+                        <div class="product-full-desc d-none">
+                            Acest rucsac a fost testat în ploi torențiale în munții Făgăraș și pe trasee de hiking din
+                            Thailanda. Materialul exterior din Nylon 600D oferă o rezistență deosebită la abraziune și
+                            este 100% impermeabil. Spatele dispune de sistemul AirFlow care previne transpirația
+                            excesivă, iar centura de șold distribuie perfect greutatea pentru a proteja coloana. Include
+                            husă de ploaie reflectorizantă și buzunare secrete pentru documente.
+                        </div>
+                        <hr class="my-3 opacity-25">
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <span class="fw-bold text-teal product-price">2.450 MDL</span>
+                            <button class="btn btn-sm text-white px-3 fw-bold shadow-sm btn-vezi-produs"
+                                style="background-color: #00897B;">
+                                <i class="fas fa-eye me-1"></i> Vezi Produs
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produs 2 -->
+            <div class="col-md-6 col-lg-4 gear-item-card" data-category="foto">
+                <div class="card h-100 shadow-sm border-0">
+                    <!-- Modificat fundalul și potrivirea imaginii la fel ca la Produsul 1 -->
+                    <div class="overflow-hidden position-relative bg-light p-3" style="height: 250px;">
+                        <img src="./img/gear2r.avif" class="card-img-top w-100 h-100 product-img"
+                            style="object-fit: contain;" alt="Cameră Mirrorless">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="h5 card-title fw-bold product-title" style="font-family: 'Playfair Display', serif;">
+                            Aparat Mirrorless 24.2MP</h3>
+                        <p class="card-text text-muted flex-grow-1 small product-short-desc">Partenerul meu ideal pentru
+                            peisaje clare și vloguri fluide. Stabilizare internală excelentă și focalizare rapidă pe
+                            ochi.
+                        </p>
+                        <div class="product-full-desc d-none">
+                            Aparatul foto suprem pentru travel vlogging și fotografie de peisaj. Senzorul CMOS de 24.2
+                            megapixeli oferă detalii incredibile chiar și în condiții de lumină slabă (cum ar fi
+                            apusurile sau interiorul catedralelor). Înregistrează video 4K la 60fps fără crop, iar
+                            ecranul este complet tactil și rabatabil la 180 de grade, fiind ideal pentru auto-filmare.
+                            Bateria rezistă la aproximativ 420 de declanșări.
+                        </div>
+                        <hr class="my-3 opacity-25">
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <span class="fw-bold text-teal product-price">16.900 MDL</span>
+                            <button class="btn btn-sm text-white px-3 fw-bold shadow-sm btn-vezi-produs"
+                                style="background-color: #00897B;">
+                                <i class="fas fa-eye me-1"></i> Vezi Produs
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produs 3 -->
+            <div class="col-md-6 col-lg-4 gear-item-card" data-category="gadgeturi">
+                <div class="card h-100 shadow-sm border-0 transition-card">
+                    <!-- Modificat fundalul și potrivirea imaginii la fel ca la restul -->
+                    <div class="overflow-hidden position-relative bg-light p-3" style="height: 250px;">
+                        <img src="./img/gear3-r.png" class="card-img-top w-100 h-100 img-zoom product-img"
+                            style="object-fit: contain;" alt="Acumulator Extern Solar Portabil">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="h5 card-title fw-bold product-title" style="font-family: 'Playfair Display', serif;">
+                            PowerBank Solar 20000mAh</h3>
+                        <p class="card-text text-muted flex-grow-1 small product-short-desc">Rezistent la șocuri și apă,
+                            se încarcă de la soare în drumeții. Poate încărca telefonul de până la 5 ori la o singură
+                            utilare.</p>
+                        <div class="product-full-desc d-none">
+                            O piesă de siguranță critică pentru momentele în care campezi departe de civilizație.
+                            Carcasa cauciucată are certificare IP67 (rezistență la praf și scufundare în apă). Panoul
+                            solar integrat reîncarcă acumulatorul în mod pasiv pe parcursul zilei când este atașat de
+                            rucsac. Dispune de tehnologie QuickCharge 3.0 și o lanternă LED integrată puternică cu mod
+                            SOS de urgență.
+                        </div>
+                        <hr class="my-3 opacity-25">
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <span class="fw-bold text-teal product-price">790 MDL</span>
+                            <button class="btn btn-sm text-white px-3 fw-bold shadow-sm btn-vezi-produs"
+                                style="background-color: #00897B;">
+                                <i class="fas fa-eye me-1"></i> Vezi Produs
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produs 4 -->
+            <div class="col-md-6 col-lg-4 gear-item-card" data-category="foto">
+                <div class="card h-100 shadow-sm border-0 transition-hover">
+                    <div class="overflow-hidden position-relative bg-light d-flex align-items-center justify-content-center"
+                        style="height: 250px;">
+                        <img src="./img/gear4.webp" class="card-img-top w-100 h-100 product-img"
+                            style="object-fit: contain; padding: 10px;" alt="Trepied de călătorie">
+                    </div>
+                    <div class="card-body d-flex flex-column p-4">
+                        <h3 class="h5 card-title fw-bold product-title mb-2"
+                            style="font-family: 'Playfair Display', serif; color: #2C3E50;">Trepied Carbon Ultra-Light
+                        </h3>
+                        <p class="card-text text-muted flex-grow-1 small product-short-desc">Cântărește doar 900g și se
+                            pliază compact pentru rucsac. Ideal pentru fotografiile de noapte sau apusuri lungi.</p>
+                        <div class="product-full-desc d-none">
+                            Construit integral din fibră de carbon aerospațială, acest trepied oferă stabilitate maximă
+                            anulând vibrațiile vântului fără a adăuga greutate bagajului tău. Se strânge la o dimensiune
+                            de doar 32 cm, potrivindu-se perfect în buzunarul lateral al oricărui rucsac de turism.
+                            Capul cu bilă panoramic oferă o rotație lină la 360 de grade, excelentă pentru
+                            astrofotografie și cadre lungi (long exposure).
+                        </div>
+                        <hr class="my-3 opacity-25">
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <span class="fw-bold product-price fs-5" style="color: #00897B;">1.850 MDL</span>
+                            <button
+                                class="btn btn-sm text-white px-3 py-2 fw-bold shadow-sm btn-vezi-produs text-uppercase tracking-wider"
+                                style="background-color: #00897B; border-radius: 6px; font-size: 0.8rem;">
+                                <i class="fas fa-eye me-1"></i> Vezi Produs
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produs 5 -->
+            <div class="col-md-6 col-lg-4 gear-item-card" data-category="bagaje">
+                <div class="card h-100 shadow-sm border-0 transition-hover">
+                    <div class="overflow-hidden position-relative bg-light d-flex align-items-center justify-content-center"
+                        style="height: 250px;">
+                        <img src="./img/gear5-r.png" class="card-img-top w-100 h-100 product-img"
+                            style="object-fit: contain; padding: 10px;" alt="Organizatoare bagaj">
+                    </div>
+                    <div class="card-body d-flex flex-column p-4">
+                        <h3 class="h5 card-title fw-bold product-title mb-2"
+                            style="font-family: 'Playfair Display', serif; color: #2C3E50;">Set Organizatoare Troller
+                        </h3>
+                        <p class="card-text text-muted flex-grow-1 small product-short-desc">Sistem de compresie din
+                            nailon rezistent. Îți salvează 40% din spațiul din bagaj și mențin hainele perfect
+                            organizate.</p>
+                        <div class="product-full-desc d-none">
+                            Secretul organizării mele eficiente! Acest set conține 6 piese de dimensiuni diferite
+                            fabricate dintr-o plasă ultra-ușoară și fermoare premium YKK. Fermoarele duble de compresie
+                            elimină aerul dintre haine, comprimându-le la jumătate din volum. Îți permit să sortezi
+                            tricourile, lenjeria și cablurile separat, salvându-te de haosul din troller în timpul
+                            verificărilor de la aeroport.
+                        </div>
+                        <hr class="my-3 opacity-25">
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <span class="fw-bold product-price fs-5" style="color: #00897B;">420 MDL</span>
+                            <button
+                                class="btn btn-sm text-white px-3 py-2 fw-bold shadow-sm btn-vezi-produs text-uppercase tracking-wider"
+                                style="background-color: #00897B; border-radius: 6px; font-size: 0.8rem;">
+                                <i class="fas fa-eye me-1"></i> Vezi Produs
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produs 6 -->
+            <div class="col-md-6 col-lg-4 gear-item-card" data-category="gadgeturi">
+                <div class="card h-100 shadow-sm border-0 transition-hover">
+                    <div class="overflow-hidden position-relative bg-light d-flex align-items-center justify-content-center"
+                        style="height: 250px;">
+                        <img src="./img/gear6-r.png" class="card-img-top w-100 h-100 product-img"
+                            style="object-fit: contain; padding: 10px;" alt="Adaptor universal">
+                    </div>
+                    <div class="card-body d-flex flex-column p-4">
+                        <h3 class="h5 card-title fw-bold product-title mb-2"
+                            style="font-family: 'Playfair Display', serif; color: #2C3E50;">Adaptor Universal de Priză
+                        </h3>
+                        <p class="card-text text-muted flex-grow-1 small product-short-desc">Compatibil în peste 150 de
+                            țări. Dispune de 4 porturi USB și siguranțe inteligente pentru protecția gadgeturilor tale.
+                        </p>
+                        <div class="product-full-desc d-none">
+                            Un singur încărcător pentru toate dispozitivele tale, oriunde în lume! Sistemul glisat
+                            ascunde pini reglabili pentru standardele din SUA, UK, Europa și Australia. Cele 4 porturi
+                            USB rapide (dintre care unul de tip USB-C Power Delivery) îți permit să încarci simultan
+                            laptopul, telefonul, drona și ceasul inteligent direct dintr-o singură priză de hotel,
+                            protejându-le împotriva supratensiunii.
+                        </div>
+                        <hr class="my-3 opacity-25">
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <span class="fw-bold product-price fs-5" style="color: #00897B;">510 MDL</span>
+                            <button
+                                class="btn btn-sm text-white px-3 py-2 fw-bold shadow-sm btn-vezi-produs text-uppercase tracking-wider"
+                                style="background-color: #00897B; border-radius: 6px; font-size: 0.8rem;">
+                                <i class="fas fa-eye me-1"></i> Vezi Produs
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- ÎNCHIDERE GRID PRODUSE -->
+
+    </main> <!-- ACEST TAG LIPSEA SAU ERA PUS GREȘIT - ÎNCHIDE CONȚINUTUL PRINCIPAL -->
+
+    <!-- FOOTER PREMIUM UPDATED WITH CLEAN COPYRIGHT -->
+    <footer class="bg-dark text-white py-5 mt-auto border-top border-4" style="border-color: #00897B !important;">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- Coloana 1: Despre Brand & Social -->
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3" style="font-family: 'Playfair Display', serif; font-size: 1.4rem;">
+                        <span style="color: #00897B;">Wander</span><span style="color: #FF7043;">lust</span>
+                    </h5>
+                    <p class="small text-secondary lh-lg mb-3">
+                        Un blog dedicat exploratorilor autentici. Împărtășesc ghiduri vizuale, bugete reale și recenzii
+                        de echipamente pentru a te ajuta să îți organizezi următoarea aventură.
+                    </p>
+                    <div class="d-flex gap-3 fs-5 mt-3">
+                        <a href="#" class="text-secondary" style="color: #00897B !important;" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-secondary" style="color: #00897B !important;" aria-label="Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-secondary" style="color: #00897B !important;" aria-label="YouTube"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-secondary" style="color: #00897B !important;" aria-label="Pinterest"><i
+                                class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <!-- Coloana 2: Navigare & Categorii -->
+                <div class="col-6 col-lg-2 offset-lg-1">
+                    <h6 class="text-uppercase fw-bold text-white small tracking-wider mb-3">Navigare</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html"
+                                class="text-secondary text-decoration-none small">Acasă</a></li>
+                        <li class="mb-2"><a href="destinations.html"
+                                class="text-secondary text-decoration-none small">Destinații</a></li>
+                        <li class="mb-2"><a href="gear.html"
+                                class="text-secondary text-decoration-none small">Echipament</a></li>
+                        <li class="mb-2"><a href="articles.html" class="text-secondary text-decoration-none small">Toate
+                                Articolele</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coloana 3: Contact & Info Utile -->
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-uppercase fw-bold text-white small tracking-wider mb-3">Contact direct</h6>
+                    <ul class="list-unstyled text-secondary small lh-lg">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2" style="color: #00897B;"></i> Chișinău,
+                            Moldova</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2" style="color: #00897B;"></i>
+                            contact@wanderlust.md</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2" style="color: #00897B;"></i> +373 60 000 000</li>
+                    </ul>
+                </div>
+
+                <!-- Coloana 4: Newsletter Box -->
+                <div class="col-md-6 col-lg-4">
+                    <h6 class="text-uppercase fw-bold text-white small tracking-wider mb-3">Rămâi în contact cu aventura
+                    </h6>
+                    <p class="small text-secondary mb-3">Abonează-te pentru a primi ghiduri de călătorie lunare și
+                        reduceri la echipamente direct în inbox.</p>
+                    <form action="#" class="row g-2">
+                        <div class="col-8">
+                            <input type="email"
+                                class="form-control form-control-sm border-secondary text-white px-3 py-2"
+                                style="background-color: rgba(225, 221, 221, 0.562); color: #ffffff !important; border-radius: 4px;"
+                                placeholder="Adresa ta de email..." required>
+                        </div>
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-sm btn-coral w-100 fw-bold py-2 text-white"
+                                style="background-color: #FF7043; border-color: #FF7043; border-radius: 4px;">
+                                Înscrie-te
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Linie subțire de separare -->
+            <hr class="my-4 opacity-10 bg-secondary">
+
+            <!-- Secțiunea Nouă de Copyright Personalizat -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="small text-secondary m-0">
+                        &copy; 2026 <span class="fw-bold" style="color: #00897B;">Wanderlust</span>. Toate drepturile
+                        rezervate.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- FEREASTRA MODALĂ (POP-UP DETALII PRODUS) -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header text-white border-0" style="background-color: #00897B;">
+                    <h5 class="modal-title fw-bold" id="productModalLabel"
+                        style="font-family: 'Playfair Display', serif;">Detalii Produs</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Închide"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-5">
+                            <img src="" id="modalImg" class="img-fluid rounded shadow-sm w-100"
+                                style="max-height: 300px; object-fit: cover;" alt="Imagine Produs">
+                        </div>
+                        <div class="col-md-7">
+                            <h2 class="h3 fw-bold mb-2 text-dark" id="modalTitle"
+                                style="font-family: 'Playfair Display', serif;"></h2>
+                            <span class="badge mb-3 fs-6" id="modalPrice" style="background-color: #FF7043;"></span>
+                            <p class="text-muted small lh-lg" id="modalFullDesc"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light border-0">
+                    <button type="button" class="btn btn-secondary px-4 fw-bold small"
+                        data-bs-dismiss="modal">Închide</button>
+                    <a href="contact.html" class="btn text-white px-4 fw-bold small" style="background-color: #00897B;">
+                        <i class="fas fa-shopping-cart me-1"></i> Întreabă de Stoc / Rezervă
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to top -->
+    <button id="backToTop" class="btn btn-coral rounded-circle position-fixed bottom-0 end-0 m-4 shadow d-none"
+        style="z-index: 1030; width: 45px; height: 45px; background-color: #FF7043; border-color: #FF7043;">
+        <i class="fas fa-arrow-up text-white"></i>
+    </button>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filters = document.querySelectorAll('#gearFilterContainer .filter-btn');
+            const items = document.querySelectorAll('.gear-item-card');
+
+            filters.forEach(button => {
+                button.addEventListener('click', function () {
+                    filters.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const targetFilter = this.getAttribute('data-filter');
+
+                    items.forEach(item => {
+                        if (targetFilter === 'toate' || item.getAttribute('data-category') === targetFilter) {
+                            item.classList.remove('d-none');
+                        } else {
+                            item.classList.add('d-none');
+                        }
+                    });
+                });
+            });
+
+            const productModal = new bootstrap.Modal(document.getElementById('productModal'));
+            const modalImg = document.getElementById('modalImg');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalPrice = document.getElementById('modalPrice');
+            const modalFullDesc = document.getElementById('modalFullDesc');
+            const veziProdusButtons = document.querySelectorAll('.btn-vezi-produs');
+
+            veziProdusButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const card = this.closest('.card');
+                    const title = card.querySelector('.product-title').innerText;
+                    const price = card.querySelector('.product-price').innerText;
+                    const imgSrc = card.querySelector('.product-img').getAttribute('src');
+                    const fullDesc = card.querySelector('.product-full-desc').innerHTML;
+
+                    modalTitle.innerText = title;
+                    modalPrice.innerText = price;
+                    modalImg.setAttribute('src', imgSrc);
+                    modalImg.setAttribute('alt', title);
+                    modalFullDesc.innerHTML = fullDesc;
+
+                    productModal.show();
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
